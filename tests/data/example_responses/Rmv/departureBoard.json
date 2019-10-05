@@ -1,0 +1,207 @@
+{
+  "Departure": [
+    {
+      "JourneyDetailRef": {
+        "ref": "1|196672|0|80|3102019"
+      },
+      "JourneyStatus": "P",
+      "Product": {
+        "name": "    RE99",
+        "num": "168",
+        "line": "RE99",
+        "catOut": "RE      ",
+        "catIn": "FDN",
+        "catCode": "2",
+        "catOutS": "FDN",
+        "catOutL": "RE",
+        "operatorCode": "HLB",
+        "operator": "Hessische Landesbahn GmbH",
+        "admin": "K4RE__"
+      },
+      "Notes": {
+        "Note": [
+          {
+            "value": "24958",
+            "key": "FD",
+            "type": "I",
+            "routeIdxFrom": 0,
+            "routeIdxTo": 5
+          }
+        ]
+      },
+      "name": "    RE99",
+      "type": "S",
+      "stop": "Dillenburg Bahnhof",
+      "stopid": "A=1@O=Dillenburg Bahnhof@X=8294589@Y=50734902@U=80@L=3011005@",
+      "stopExtId": "3011005",
+      "prognosisType": "PROGNOSED",
+      "time": "09:38:00",
+      "date": "2019-10-03",
+      "track": "4",
+      "rtTime": "09:42:00",
+      "rtDate": "2019-10-03",
+      "rtTrack": "4",
+      "reachable": true,
+      "direction": "Siegen Hauptbahnhof",
+      "trainNumber": "168",
+      "trainCategory": "FDN"
+    },
+    {
+      "JourneyDetailRef": {
+        "ref": "1|196337|0|80|3102019"
+      },
+      "JourneyStatus": "P",
+      "Product": {
+        "name": "    RB95",
+        "num": "2028",
+        "line": "RB95",
+        "catOut": "RB      ",
+        "catIn": "GWD",
+        "catCode": "2",
+        "catOutS": "GWD",
+        "catOutL": "RB",
+        "operatorCode": "HLB",
+        "operator": "Hessische Landesbahn GmbH",
+        "admin": "K4RB__"
+      },
+      "Notes": {
+        "Note": [
+          {
+            "value": "Info unter www.dreilaenderbahn.de",
+            "key": "DL",
+            "type": "A",
+            "priority": 351,
+            "routeIdxFrom": 0,
+            "routeIdxTo": 6
+          },
+          {
+            "value": "24372",
+            "key": "FD",
+            "type": "I",
+            "routeIdxFrom": 0,
+            "routeIdxTo": 6
+          }
+        ]
+      },
+      "name": "    RB95",
+      "type": "S",
+      "stop": "Dillenburg Bahnhof",
+      "stopid": "A=1@O=Dillenburg Bahnhof@X=8294589@Y=50734902@U=80@L=3011005@",
+      "stopExtId": "3011005",
+      "prognosisType": "PROGNOSED",
+      "time": "09:47:00",
+      "date": "2019-10-03",
+      "track": "2",
+      "rtTime": "09:47:00",
+      "rtDate": "2019-10-03",
+      "rtTrack": "2",
+      "reachable": true,
+      "direction": "Siegen Hauptbahnhof",
+      "trainNumber": "2028",
+      "trainCategory": "GWD"
+    },
+    {
+      "JourneyDetailRef": {
+        "ref": "1|196396|0|80|3102019"
+      },
+      "JourneyStatus": "P",
+      "Product": {
+        "name": "    RB96",
+        "num": "2088",
+        "line": "RB96",
+        "catOut": "RB      ",
+        "catIn": "GWD",
+        "catCode": "2",
+        "catOutS": "GWD",
+        "catOutL": "RB",
+        "operatorCode": "HLB",
+        "operator": "Hessische Landesbahn GmbH",
+        "admin": "K4RB__"
+      },
+      "Notes": {
+        "Note": [
+          {
+            "value": "Info unter www.dreilaenderbahn.de",
+            "key": "DL",
+            "type": "A",
+            "priority": 351,
+            "routeIdxFrom": 0,
+            "routeIdxTo": 19
+          },
+          {
+            "value": "61772",
+            "key": "FD",
+            "type": "I",
+            "routeIdxFrom": 0,
+            "routeIdxTo": 19
+          }
+        ]
+      },
+      "name": "    RB96",
+      "type": "S",
+      "stop": "Dillenburg Bahnhof",
+      "stopid": "A=1@O=Dillenburg Bahnhof@X=8294589@Y=50734902@U=80@L=3011005@",
+      "stopExtId": "3011005",
+      "prognosisType": "PROGNOSED",
+      "time": "10:16:00",
+      "date": "2019-10-03",
+      "track": "5",
+      "rtTime": "10:16:00",
+      "rtDate": "2019-10-03",
+      "rtTrack": "5",
+      "reachable": true,
+      "direction": "Betzdorf (Sieg) Bahnhof",
+      "trainNumber": "2088",
+      "trainCategory": "GWD"
+    },
+    {
+      "JourneyDetailRef": {
+        "ref": "1|196605|0|80|3102019"
+      },
+      "JourneyStatus": "P",
+      "Product": {
+        "name": "    RE99",
+        "num": "2",
+        "line": "RE99",
+        "catOut": "RE      ",
+        "catIn": "FDN",
+        "catCode": "2",
+        "catOutS": "FDN",
+        "catOutL": "RE",
+        "operatorCode": "HLB",
+        "operator": "Hessische Landesbahn GmbH",
+        "admin": "K4RE__"
+      },
+      "Notes": {
+        "Note": [
+          {
+            "value": "24907",
+            "key": "FD",
+            "type": "I",
+            "routeIdxFrom": 0,
+            "routeIdxTo": 7
+          }
+        ]
+      },
+      "name": "    RE99",
+      "type": "S",
+      "stop": "Dillenburg Bahnhof",
+      "stopid": "A=1@O=Dillenburg Bahnhof@X=8294589@Y=50734902@U=80@L=3011005@",
+      "stopExtId": "3011005",
+      "prognosisType": "PROGNOSED",
+      "time": "10:17:00",
+      "date": "2019-10-03",
+      "track": "3",
+      "rtTime": "10:17:00",
+      "rtDate": "2019-10-03",
+      "rtTrack": "3",
+      "reachable": true,
+      "direction": "Frankfurt (Main) Hauptbahnhof",
+      "trainNumber": "2",
+      "trainCategory": "FDN"
+    }
+  ],
+  "serverVersion": "1.9",
+  "dialectVersion": "1.23",
+  "requestId": "1570088166989"
+}

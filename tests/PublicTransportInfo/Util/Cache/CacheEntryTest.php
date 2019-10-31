@@ -137,6 +137,7 @@ class CacheEntryTest extends TestCase
         $this->assertTrue($cacheEntry->isValid(new DateTime("2013-06-07 13:18:00")), "Time exactly on expire timestamp");
         $this->assertFalse($cacheEntry->isValid(new DateTime("2013-06-07 13:18:01")), "Time just after expire timestamp");
         $this->assertFalse($cacheEntry->isValid(new DateTime("2013-06-07 16:53:00")), "Time after expire timestamp");
+        $this->assertFalse($cacheEntry->isValid(new DateTime("2013-06-08 10:00:00")), "Time on next day but before expire time");
     }
 
     /**
@@ -151,7 +152,7 @@ class CacheEntryTest extends TestCase
                    ->setFor("stuff");
 
         $json = $cacheEntry->toJson();
-        $this->assertEquals("13:12:00", $json->createTimestamp);
+        $this->assertTrue(is_integer($json->createTimestamp));
         $this->assertEquals(330, $json->validForSeconds);
         $this->assertEquals((object)array(
             "secret" => "gsf",

@@ -99,8 +99,9 @@ class CacheTest extends TestCase
         $cacheDirectoryStructure = array(
             "Rmv" => array(
                 "blablub" => array(
+                    // 2019-09-20 10:00:00
                     "last-result.json" => "{
-                                              \"createTimestamp\": \"10:00:00\",
+                                              \"createTimestamp\": \"1568966400\",
                                               \"validForSeconds\": 600,
                                               \"data\": \"no complex data\",
                                               \"for\": \"nothing\"
@@ -121,8 +122,13 @@ class CacheTest extends TestCase
         $this->assertInstanceOf(CacheEntry::class, $entry);
         $this->assertTrue($entry->isFor("nothing"));
         $this->assertEquals("no complex data", $entry->getData());
-        $this->assertTrue($entry->isValid(new GermanDateTime("10:10:00")));
-        $this->assertFalse($entry->isValid(new GermanDateTime("10:10:01")));
+
+        $this->assertTrue($entry->isValid(new GermanDateTime("2019-09-20 10:10:00")));
+        $this->assertFalse($entry->isValid(new GermanDateTime("2019-09-20 10:10:01")));
+
+        $this->assertTrue($entry->isValid(new GermanDateTime("2019-09-19 10:10:01")), "Day before but after valid time limit reached");
+        $this->assertTrue($entry->isValid(new GermanDateTime("2019-09-20 09:00:00")), "Same day and before valid time limit reached");
+        $this->assertFalse($entry->isValid(new GermanDateTime("2019-09-21 09:00:00")), "Next day and before valid time limit reached");
     }
 
     /**
@@ -236,8 +242,9 @@ class CacheTest extends TestCase
         $cacheDirectoryStructure = array(
             "Rmv" => array(
                 "station-a" => array(
+                    // 2019-10-31 12:41:00
                     "last-result.json" => "{
-                                              \"createTimestamp\": \"12:41:00\",
+                                              \"createTimestamp\": \"1572522060\",
                                               \"validForSeconds\": 200,
                                               \"data\": \"just some text\",
                                               \"for\": \"atest\"

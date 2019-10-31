@@ -180,7 +180,7 @@ class CacheEntry
     public function toJson(): stdClass
     {
         return (object)array(
-            "createTimestamp" => $this->createTimestamp->format("H:i:s"),
+            "createTimestamp" => $this->createTimestamp->getTimestamp(),
             "validForSeconds" => $this->validForSeconds,
             "data" => $this->data,
             "for" => $this->for
@@ -194,7 +194,9 @@ class CacheEntry
      */
     public function loadFromJson(stdClass $_json)
     {
-        $this->createTimestamp = GermanDateTime::createFromFormat("H:i:s", $_json->createTimestamp);
+        $this->createTimestamp = new GermanDateTime();
+        $this->createTimestamp->setTimestamp($_json->createTimestamp);
+
         $this->validForSeconds = $_json->validForSeconds;
         $this->data = $_json->data;
         $this->for = $_json->for;

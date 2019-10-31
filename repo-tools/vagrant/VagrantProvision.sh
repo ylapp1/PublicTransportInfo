@@ -8,7 +8,7 @@ apt-get install -y bash-completion
 
 
 # Install php
-apt-get install -y php7.0 php7.0-json php7.0-mbstring php7.0-dom php-xdebug
+apt-get install -y php7.0 php7.0-json php-xdebug
 
 # Install apache
 apt-get install -y apache2 libapache2-mod-php7.0

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="publictransportinfo" default="help">
+
+    <target name="help" description="Shows a text to explain how to use this build file">
+        <echo msg="Use `phing -list` to show the available targets"/>
+        <echo msg="Then use `phing &lt;target-name&gt;` to execute a target"/>
+    </target>
+
+
+    <property name="tmpdir" value="/tmp/buildtmp"/>
+
+    <target name="pack" description="Creates a phar package from the source code">
+
+        <mkdir dir="${tmpdir}/pack"/>
+
+        <copy todir="${tmpdir}/pack/src">
+            <fileset dir="${project.basedir}/src"/>
+        </copy>
+        <copy file="${project.basedir}/composer.json" todir="${tmpdir}/pack"/>
+        <copy file="${project.basedir}/composer.lock" todir="${tmpdir}/pack"/>
+
+        <exec command="composer install --no-dev" dir="${tmpdir}/pack" passthru="true"/>
+
+        <pharpackage basedir="${tmpdir}/pack" destfile="${project.basedir}/PublicTransportInfo.phar">
+            <fileset dir="${tmpdir}/pack">
+                <include name="**/**" />
+            </fileset>
+        </pharpackage>
+
+        <delete dir="${tmpdir}/pack"/>
+
+    </target>
+
+</project>
